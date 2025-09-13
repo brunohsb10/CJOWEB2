@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" 
     import="java.util.List,br.edu.ifspcjo.ads.cjoweb2.project4.model.Person"%>
     
-    <%@ taglib prefix="c" uri="jakarta.tags.core"%>
+   <%@ taglib prefix="c" uri="jakarta.tags.core"%>
   <%@ taglib prefix="fn" uri="jakarta.tags.functions"%>
 <!DOCTYPE html>            
 <html lang="pt-BR">

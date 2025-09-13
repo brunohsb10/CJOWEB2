@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário do Aluno</title>
+</head>
+<body>
+  <section>
+    <h1>Formulário do Aluno</h1>
+    <form action="register" method="post">
+      <label for="name">Nome:</label>
+      <input type="text" name="name" id="name">
+
+      <label for="email">E-mail Principal:</label>
+      <input type="email" name="email1" id="email1">
+      
+      <label for="email2">E-mail Secundario:</label>
+      <input type="email" name="email2" id="email2">
+      
+      <label for="email3">Confirmação do E-mail :</label>
+      <input type="email" name="email3" id="email3">
+
+      <fieldset>
+        <legend>Quais cursos são do seu interesse?</legend>
+
+        <input type="checkbox" name="options" id="cursoBootstrap" value="Curso de Bootstrap">
+        <label for="cursoBootstrap">Curso de Bootstrap</label><br>
+
+        <input type="checkbox" name="options" id="cursoAnimacoesCSS" value="Curso de Animações em CSS 3">
+        <label for="cursoAnimacoesCSS">Curso de Animações em CSS 3</label><br>
+
+        <input type="checkbox" name="options" id="cursoDesignPatterns" value="Curso de Design Patterns">
+        <label for="cursoDesignPatterns">Curso de Design Patterns</label>
+      </fieldset>
+
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </form>
+  </section>
+</body>
+</html>
