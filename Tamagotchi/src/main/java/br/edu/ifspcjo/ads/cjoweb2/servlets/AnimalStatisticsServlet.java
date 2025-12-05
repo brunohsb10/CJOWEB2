@@ -30,7 +30,7 @@ public class AnimalStatisticsServlet extends HttpServlet {
 
         switch (category) {
             case "bySpecies":
-                // CORREÇÃO: Removemos o (user) daqui. Fica vazio ().
+                
                 resp.getWriter().write(new Gson().toJson(animalDao.getAnimalsStatisticsBySpecies()));
                 break;
                 
@@ -38,7 +38,7 @@ public class AnimalStatisticsServlet extends HttpServlet {
                 Gson gson = new GsonBuilder()
                         .registerTypeAdapter(LocalDate.class, new LocalDateTypeAdapter())
                         .create();
-                // CORREÇÃO: Removemos o (user) daqui também.
+               
                 resp.getWriter().write(gson.toJson(animalDao.getAnimalsStatisticsByBirthDate()));
                 break;
         }
