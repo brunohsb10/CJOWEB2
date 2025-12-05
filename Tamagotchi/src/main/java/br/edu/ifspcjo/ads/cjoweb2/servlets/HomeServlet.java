@@ -1,10 +1,10 @@
-package br.edu.ifspcjo.ads.cjoweb2.servlets; //  Atenção ao pacote correto do seu projeto
+package br.edu.ifspcjo.ads.cjoweb2.servlets; 
 
 import java.io.IOException;
 import java.util.List;
 
-import br.edu.ifspcjo.ads.cjoweb2.dao.AnimalDao; //  Alterado de ActivityDao
-import br.edu.ifspcjo.ads.cjoweb2.model.Animal; // [cite: 98] Alterado de Activity
+import br.edu.ifspcjo.ads.cjoweb2.dao.AnimalDao; 
+import br.edu.ifspcjo.ads.cjoweb2.model.Animal; 
 import br.edu.ifspcjo.ads.cjoweb2.model.User;
 import br.edu.ifspcjo.ads.cjoweb2.utils.DataSourceSearcher;
 import jakarta.servlet.RequestDispatcher;
@@ -39,7 +39,7 @@ public class HomeServlet extends HttpServlet {
 		AnimalDao animalDao = new AnimalDao(DataSourceSearcher.getInstance().getDataSource());
 		List<Animal> userAnimals = animalDao.getAnimalsByUser(user); // [cite: 104] Busca animais, não atividades
 		
-		// Define o atributo para o JSP
+		
 		req.setAttribute("userAnimals", userAnimals); 
 		
 		req.setAttribute("name", user.getName()); 
