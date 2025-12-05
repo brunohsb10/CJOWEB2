@@ -5,11 +5,11 @@
 <!doctype html>
 <html lang="pt-BR" data-bs-theme="light">
 <head>
-<!-- Required meta tags -->
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap CSS -->
+
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -20,7 +20,7 @@
 	<div class="container mt-5">
 		<div class="col-lg-6 offset-lg-3 col-sm-12">
 			
-			<!-- Mensagem de Erro -->
+			
 			<c:if test="${result == 'notRegistered'}">
 				<div class="alert alert-danger alert-dismissible fade show"
 					role="alert">
@@ -62,7 +62,7 @@
 							<span id="3" class="text-danger"></span>
 						</div>
 						
-						<!-- Campo TIPO DE USUÁRIO (Adicionado para o Tamagotchi) -->
+						
 						<div class="mb-3">
 							<label for="type" class="form-label">Tipo de Usuário*</label> 
 							<select class="form-select" name="type" id="type" required="required">
