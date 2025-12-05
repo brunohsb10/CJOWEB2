@@ -1,6 +1,6 @@
 "use strict";
 
-// Cores para os gráficos
+
 var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
 
 window.onload = loadData;
@@ -10,7 +10,7 @@ function loadData(){
 	getAnimalStatisticsByBirthDate();
 }
 
-// 1. Estatísticas por Espécie (Donut)
+
 function getAnimalStatisticsBySpecies(){
 	// Ajustado para o Servlet de Animais
 	const url = "animalStatistics?category=bySpecies";
@@ -25,7 +25,7 @@ function getAnimalStatisticsBySpecies(){
 	.catch(error => console.log('Erro de solicitação', error));
 }
 
-// 2. Estatísticas por Data de Nascimento (Barra)
+
 function getAnimalStatisticsByBirthDate(){
 	// Ajustado para o Servlet de Animais
 	const url = "animalStatistics?category=byBirthDate";
