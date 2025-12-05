@@ -1,0 +1,39 @@
+CREATE DATABASE tamagotchi;
+
+USE tamagotchi;
+CREATE TABLE user (
+	id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	password VARCHAR(150) NOT NULL,
+	birth_date DATE NOT NULL,
+	gender VARCHAR(30) NOT NULL,
+  	active BOOLEAN NOT NULL,
+    type  VARCHAR (20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+
+CREATE TABLE animal (
+	id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(50) NOT NULL,
+	species VARCHAR(20) NOT NULL,
+    description TEXT,
+	birth_date DATE NOT NULL,
+    status varchar(20) NOT NULL,
+    user_id BIGINT, 
+    FOREIGN KEY (user_id) REFERENCES 
+    user(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+CREATE TABLE adopter (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    phone VARCHAR(20),
+    address VARCHAR(50)
+);
+
+
+
