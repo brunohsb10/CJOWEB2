@@ -5,7 +5,7 @@ window.onload = initPage;
 function initPage(){
 	let form;
 	form = document.getElementById('form1');
-	// desativar a validação automática do HTML5
+	
 	form.noValidate = true;
 	form.addEventListener('submit', function(e){
 		let valid = processValidity(this);
