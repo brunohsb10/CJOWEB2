@@ -14,7 +14,7 @@ import com.google.gson.JsonSerializer;
 
 public class LocalDateTypeAdapter implements JsonSerializer<LocalDate>, JsonDeserializer<LocalDate> {
 
-	  // Formata a data como "aaaa-mm-dd" (padrão ISO) para o JSON
+	  
 	  private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 	  @Override
