@@ -17,7 +17,7 @@ public class AnimalDao {
         this.dataSource = dataSource;
     }
 
-    // --- CRUD BÁSICO ---
+    
     public void save(Animal a) {
         String sql = "INSERT INTO animal (name, species, birth_date, description, status, user_id) VALUES (?,?,?,?,?,?)";
         try (Connection conn = dataSource.getConnection();
@@ -86,7 +86,7 @@ public class AnimalDao {
         } catch (SQLException e) { throw new RuntimeException(e); }
     }
 
-    // --- FILTROS (Consertando o erro do SearchServlet) ---
+    
     public List<Animal> getAnimalsByFilter(AnimalFilter filter) {
         StringBuilder sql = new StringBuilder("SELECT * FROM animal WHERE 1=1");
         List<Object> params = new ArrayList<>();
@@ -120,8 +120,7 @@ public class AnimalDao {
         return list;
     }
 
-    // --- ESTATÍSTICAS (Consertando o erro da Imagem) ---
-    // Note que removi o parâmetro 'User', pois o Admin vê tudo
+    
     
     public List<AnimalBySpecies> getAnimalsStatisticsBySpecies() {
         String sql = "SELECT species, COUNT(*) AS count FROM animal GROUP BY species";
@@ -148,7 +147,7 @@ public class AnimalDao {
         return list;
     }
     
-    // Método auxiliar para não repetir código
+    
     private Animal mapResultSetToAnimal(ResultSet rs) throws SQLException {
         Animal a = new Animal();
         a.setId(rs.getLong("id"));
@@ -158,7 +157,7 @@ public class AnimalDao {
         a.setDescription(rs.getString("description"));
         a.setStatus(rs.getString("status"));
         a.setUserId(rs.getLong("user_id"));
-        // Verifica se a coluna adopter_id existe e pega o valor
+        
         try {
             int adId = rs.getInt("adopter_id");
             if (!rs.wasNull()) a.setAdopterId(adId);
@@ -166,7 +165,7 @@ public class AnimalDao {
         return a;
     }
     
-    // Método legado para manter compatibilidade, mas redireciona para findAll
+    
     public List<Animal> getAnimalsByUser(br.edu.ifspcjo.ads.cjoweb2.model.User user) {
         return findAll();
     }
