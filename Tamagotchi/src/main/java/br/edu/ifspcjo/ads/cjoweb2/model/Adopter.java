@@ -9,7 +9,7 @@ public class Adopter {
 
     public Adopter() {}
     
-    // Este é o construtor que o seu Servlet está procurando (com 5 parâmetros)
+    
     public Adopter(Integer id, String name, String email, String phone, String address) {
         this.id = id;
         this.name = name;
@@ -18,7 +18,7 @@ public class Adopter {
         this.address = address;
     }
 
-    // Getters e Setters
+    
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
     public String getName() { return name; }
