@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<!-- INCLUSÃO DA NAVBAR -->
+	
 	<jsp:include page="navbar.jsp" />
 	
 	<div class="container">
@@ -21,7 +21,7 @@
 	        </div>
 	    </div>
 	    <div class="row my-2">
-	        <!-- Gráfico 1: Donut (Por Espécie) -->
+	        
 	        <div class="col-md-6 py-1">
 	            <div class="card h-100 shadow-sm">
 	            	<div class="card-header ">
@@ -33,7 +33,7 @@
 	            </div>
 	        </div>
 	        
-	        <!-- Gráfico 2: Barras (Por Data de Nascimento) -->
+	        
 	        <div class="col-md-6 py-1">
 	            <div class="card h-100 shadow-sm">
 	            	<div class="card-header ">
