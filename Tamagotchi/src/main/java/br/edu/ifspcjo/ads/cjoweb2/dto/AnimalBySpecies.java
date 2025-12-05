@@ -2,9 +2,8 @@ package br.edu.ifspcjo.ads.cjoweb2.dto;
 
 public class AnimalBySpecies {
 
-	private String species; // Era "type"
-	private Long count;     // Era "Integer", mas bancos geralmente retornam COUNT como Long
-
+	private String species; /
+	private Long count;     
 	public AnimalBySpecies(String species, Long count) {
 		this.species = species;
 		this.count = count;
