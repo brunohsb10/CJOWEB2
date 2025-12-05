@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <title>Tamagotchi - Página Principal</title>
 <style>
-    /* Ajuste para alinhar o botão Filtrar */
+    
     .btn-filter-container { margin-top: 30px; }
     @media (max-width: 991px) { .btn-filter-container { margin-top: 10px; } }
 </style>
@@ -39,7 +39,7 @@
 				<h1 class="text-center mb-4">Lista de Animais</h1>
 			</div>
 			
-			<!-- FORMULÁRIO DE FILTRO -->
+			
 			<div class="card p-4 mb-4 shadow-sm">
 				<form action="animalSearchServlet" method="post">
 					<div class="row">
@@ -78,7 +78,7 @@
 				</form>
 			</div>
 
-			<!-- TABELA DE RESULTADOS -->
+			
 			<c:choose>
 				<c:when test="${fn:length(userAnimals) > 0}">
 					<div class="table-responsive">
@@ -120,7 +120,7 @@
 		</div>
 	</div>
 	
-	<!-- MODAL DE EXCLUSÃO -->
+	
 	<div class="modal fade" tabindex="-1" id="myModal">
 		<div class="modal-dialog">
 		    <div class="modal-content">
