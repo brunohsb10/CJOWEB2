@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/logoutServlet") // Mudei para /logoutServlet para ser consistente (opcional)
+@WebServlet("/logoutServlet") 
 public class LogoutServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -22,13 +22,13 @@ public class LogoutServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = req.getSession(false); // Pega a sessão sem criar uma nova
+		HttpSession session = req.getSession(false); 
 		
         if (session != null) {
-            session.invalidate(); // Destrói a sessão (faz o logout)
+            session.invalidate(); 
         }
 		
-        // Envia o usuário de volta para a tela de login
+        
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/login.jsp");
 		dispatcher.forward(req, resp);
 	}
