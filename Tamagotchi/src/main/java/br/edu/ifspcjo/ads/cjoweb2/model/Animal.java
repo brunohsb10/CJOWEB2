@@ -14,9 +14,9 @@ public class Animal implements Serializable {
     private String description;
     private String status; 
     private Long userId;
-    private Integer adopterId; // NOVO CAMPO
+    private Integer adopterId; 
 
-    // Getters e Setters normais...
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
@@ -32,7 +32,7 @@ public class Animal implements Serializable {
     public Long getUserId() { return userId; }
     public void setUserId(Long userId) { this.userId = userId; }
     
-    // Getter e Setter do AdopterId
+    
     public Integer getAdopterId() { return adopterId; }
     public void setAdopterId(Integer adopterId) { this.adopterId = adopterId; }
 
