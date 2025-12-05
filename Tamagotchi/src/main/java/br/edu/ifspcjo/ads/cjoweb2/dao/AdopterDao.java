@@ -10,12 +10,12 @@ public class AdopterDao {
 
     private DataSource dataSource;
     
-    // Use o mesmo construtor do AnimalDao/UserDao
+   
     public AdopterDao(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
-    // Método para salvar um novo Adotante
+   
     public Boolean save(Adopter a) {
         String sql = "INSERT INTO adopter (name, email, phone, address) VALUES (?, ?, ?, ?)";
         try (Connection conn = dataSource.getConnection();
@@ -34,7 +34,7 @@ public class AdopterDao {
         }
     }
 
-    // Método para listar todos os Adotantes
+    
     public List<Adopter> findAll() {
         List<Adopter> adopters = new ArrayList<>();
         String sql = "SELECT id, name, email, phone, address FROM adopter ORDER BY name";
@@ -59,7 +59,7 @@ public class AdopterDao {
         return adopters;
     }
     
-    // Método para buscar um Adotante por ID (útil para edição e para a baixa de adoção)
+    
     public Adopter findById(Integer id) {
         String sql = "SELECT id, name, email, phone, address FROM adopter WHERE id = ?";
         try (Connection conn = dataSource.getConnection();
