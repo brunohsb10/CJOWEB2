@@ -5,11 +5,11 @@
 <!doctype html>
 <html lang="pt-BR" data-bs-theme="light">
   <head>
-    <!-- Required meta tags -->
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
     <title>Tamagotchi - Login</title>
@@ -18,7 +18,7 @@
   	<div class="container mt-5">
 		<div class="col-lg-4 offset-lg-4 col-sm-12">
 			
-			<!-- Alertas de Sucesso/Erro -->
+			
 			<c:choose>
 				<c:when test="${result == 'registered'}">
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -34,16 +34,16 @@
 				</c:when>
 			</c:choose>
 			
-			<!-- Card de Login -->
+			
 			<div class="card shadow-sm">
 				<div class="card-body p-4">
 			  		<form action="loginServlet" method="post">
 			  				<h1 class="text-center mb-4">Login</h1>
 			  				
-			  				<!-- Campo E-mail -->
+			  				
 			  				<div class="input-group mb-3">
 			  					<span class="input-group-text">
-			  						<!-- Ícone Envelope SVG -->
+			  						
 			  						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
 									  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
 									</svg>
@@ -53,7 +53,7 @@
 			  						class="form-control">
 			  				</div>
 			  				
-			  				<!-- Campo Senha -->
+			  				
 			  				<div class="input-group mb-3">
 			  					<span class="input-group-text">
 			  						<!-- Ícone Cadeado SVG -->
@@ -66,7 +66,7 @@
 			  						class="form-control">
 			  				</div>
 			  				
-			  				<!-- Botões -->
+			  			
 			  				<div class="d-grid gap-2">
 			  					<button type="submit" class="btn btn-primary">Entrar</button>
 			  					<a href="user-register.jsp" class="btn btn-outline-secondary">Criar nova conta</a>
