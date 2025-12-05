@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class AnimalByBirthDate {
 
 	private LocalDate date;
-	private Long count; // Substitui "totalDistance" por "count" (contagem de animais)
+	private Long count; 
 
 	public AnimalByBirthDate(LocalDate date, Long count) {
 		this.date = date;
