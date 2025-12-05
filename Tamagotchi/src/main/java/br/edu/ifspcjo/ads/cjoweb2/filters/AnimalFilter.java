@@ -4,18 +4,18 @@ import java.time.LocalDate;
 
 import br.edu.ifspcjo.ads.cjoweb2.model.User;
 
-// Alterado de ActivityFilter para AnimalFilter
+
 public class AnimalFilter {
 
 	private User user;
 	
-	// Substituímos ActivityType por String, pois sua espécie é uma String (Gato, Cachorro...)
+	
 	private String species;
 	
-	// Adicionei status, pois é comum filtrar por "DISPONIVEL" ou "ADOTADO"
+	
 	private String status;
 	
-	private LocalDate initialDate; // Para filtrar intervalo de data de nascimento
+	private LocalDate initialDate; 
 	
 	private LocalDate finalDate;
 
