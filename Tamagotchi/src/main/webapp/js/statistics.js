@@ -12,7 +12,7 @@ function loadData(){
 
 
 function getAnimalStatisticsBySpecies(){
-	// Ajustado para o Servlet de Animais
+	
 	const url = "animalStatistics?category=bySpecies";
 
 	fetch(url)
@@ -27,7 +27,7 @@ function getAnimalStatisticsBySpecies(){
 
 
 function getAnimalStatisticsByBirthDate(){
-	// Ajustado para o Servlet de Animais
+	
 	const url = "animalStatistics?category=byBirthDate";
 
 	fetch(url)
@@ -46,7 +46,7 @@ function setChartDonut(datalist){
 	  legend: {position:'bottom', padding:5, labels: {pointStyle:'circle', usePointStyle:true}}
 	};
 	
-	// Prepara os dados: species -> labels, count -> data
+	
 	var chDonutData1 = {
 	    labels: datalist.map(data => data.species),
 	    datasets: [
@@ -74,13 +74,13 @@ function setChartBar(datalist){
 	  new Chart(chBar, {
 	  type: 'bar',
 	  data: {
-	    // Formata a data de nascimento para exibir no eixo X
+	    
 	    labels: datalist.map(data => setDateFormat(data.date)),
 	    datasets: [{
-	      // Mapeia a contagem de nascimentos
+	     
 	      data: datalist.map(data => data.count),
 	      backgroundColor: colors[0],
-	      label: 'Quantidade' // Adicionei label para tooltip ficar claro
+	      label: 'Quantidade' 
 	    }]
 	  },
 	  options: {
@@ -90,8 +90,8 @@ function setChartBar(datalist){
 	    scales: {
 	      yAxes: [{
 	          ticks: {
-	              beginAtZero: true, // Garante que comece do 0
-	              stepSize: 1        // Garante números inteiros (não existe 1.5 animal)
+	              beginAtZero: true, 
+	              stepSize: 1        
 	          }
 	      }],
 	      xAxes: [{
